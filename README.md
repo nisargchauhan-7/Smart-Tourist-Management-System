@@ -1,79 +1,225 @@
 # Smart Tourist Management System
 
-A desktop-based tourism management application developed using Java Swing and MySQL. The system provides an integrated platform for managing tourists, hotels, and bookings through an intuitive graphical user interface.
+A desktop-based tourism management application developed using Java Swing, JDBC, and MySQL. The system provides an integrated platform for managing tourists, hotels, and bookings through a user-friendly graphical interface.
+
+---
 
 ## Project Overview
 
-The Smart Tourist Management System is designed to simplify tourism-related operations by centralizing tourist records, hotel information, and booking management. The application enables efficient data handling through a secure and user-friendly dashboard.
+The Smart Tourist Management System is designed to simplify tourism-related operations by centralizing tourist records, hotel information, and booking management. The application enables efficient data handling through a secure and intuitive desktop dashboard.
 
-## Key Features
+This project was developed as an academic project to demonstrate Java programming, Object-Oriented Programming concepts, JDBC connectivity, database management, and GUI development using Java Swing.
+
+---
+
+## Features
 
 ### Tourist Management
-
-* Add new tourists
-* View tourist records
-* Search tourists
-* Delete tourist information
+- Add New Tourist
+- Search Tourist Records
+- View Tourist Information
+- Delete Tourist Records
 
 ### Hotel Management
-
-* Add hotel details
-* View available hotels
-* Delete hotel records
+- Add Hotel Details
+- View Available Hotels
+- Search Hotels
+- Delete Hotel Records
 
 ### Booking Management
+- Create New Bookings
+- View Booking Details
+- Manage Tourist-Hotel Reservations
+- Delete Booking Records
 
-* Create bookings
-* View booking history
-* Delete bookings
+### Dashboard
+- Centralized Management Dashboard
+- Easy Navigation Between Modules
+- User-Friendly Interface
 
-### Dashboard Analytics
-
-* Total tourist count
-* Total hotel count
-* Total booking count
-* Real-time database integration
+---
 
 ## Technologies Used
 
-* Java
-* Java Swing
-* MySQL
-* JDBC (MySQL Connector/J)
-* Object-Oriented Programming (OOP)
-* VS Code
+| Technology | Purpose |
+|------------|----------|
+| Java | Core Programming Language |
+| Java Swing | Graphical User Interface |
+| JDBC | Database Connectivity |
+| MySQL | Database Management |
+| MySQL Connector/J | JDBC Driver |
+| Object-Oriented Programming | Application Architecture |
 
-## Database Design
+---
 
-The application uses a relational database structure consisting of:
+## Project Structure
 
-* tourists
-* hotels
-* bookings
+```text
+SmartTouristManagementSystem/
+│
+├── src/
+│   ├── db/
+│   │   ├── BookingDAO.java
+│   │   ├── DashboardDAO.java
+│   │   ├── DBConnection.java
+│   │   ├── HotelDAO.java
+│   │   └── TouristDAO.java
+│   │
+│   ├── model/
+│   │   ├── Booking.java
+│   │   ├── Hotel.java
+│   │   └── Tourist.java
+│   │
+│   ├── ui/
+│   │   ├── Dashboard.java
+│   │   ├── LoginForm.java
+│   │   ├── HotelForm.java
+│   │   ├── TouristForm.java
+│   │   ├── BookingForm.java
+│   │   └── Other UI Classes
+│   │
+│   └── util/
+│
+├── screenshots/
+│
+├── lib/
+│   └── mysql-connector-j-9.6.0.jar
+│
+├── Main.java
+├── README.md
+└── .gitignore
+```
 
-with proper relationships maintained using primary and foreign keys.
+---
+
+## Database
+
+### Database Used
+MySQL
+
+### Main Tables
+
+- Tourist
+- Hotel
+- Booking
+
+The application uses JDBC to establish a connection between the Java application and the MySQL database.
+
+---
+
+## Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/nisargchauhan-7/Smart-Tourist-Management-System.git
+```
+
+### 2. Open Project
+
+Open the project using:
+- NetBeans
+- IntelliJ IDEA
+- VS Code
+
+### 3. Configure Database
+
+Create a MySQL database and import the required tables.
+
+Update database credentials in:
+
+```java
+DBConnection.java
+```
+
+Example:
+
+```java
+String url = "jdbc:mysql://localhost:3306/tourism_db";
+String user = "root";
+String password = "your_password";
+```
+
+### 4. Add MySQL Connector
+
+Ensure the following JDBC driver is available:
+
+```text
+lib/mysql-connector-j-9.6.0.jar
+```
+
+### 5. Run Application
+
+Execute:
+
+```java
+Main.java
+```
+
+---
+
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Add Tourist
+![Add Tourist](screenshots/add-tourist.png)
+
+### Add Hotel
+![Add Hotel](screenshots/add-hotel.png)
+
+### View Tourist
+![View Tourist](screenshots/view-tourist.png)
+
+### View Hotel
+![View Hotel](screenshots/view-hotel.png)
+
+### View Booking
+![View Booking](screenshots/view-booking.png)
+
+---
 
 ## Learning Outcomes
 
-* Java GUI Development using Swing
-* Database Connectivity using JDBC
-* CRUD Operations
-* Object-Oriented Design
-* MVC-inspired Project Structure
-* MySQL Database Management
+This project helped in understanding:
+
+- Java Swing GUI Development
+- Object-Oriented Programming
+- JDBC Connectivity
+- MySQL Database Operations
+- CRUD Operations
+- Event Handling
+- Desktop Application Development
+- Software Design Principles
+
+---
 
 ## Future Enhancements
 
-* User Authentication System
-* Online Hotel Booking Integration
-* Tourist Recommendation Engine
-* Interactive Maps Integration
-* Report Generation and Export Features
+- User Authentication System
+- Role-Based Access Control
+- Report Generation
+- Online Booking Integration
+- Payment Gateway Support
+- Advanced Search & Filtering
+- Export Data to PDF/Excel
+
+---
 
 ## Author
 
-Nisarg Chauhan
+**Nisarg Chauhan**
 
-Computer Science & Design
+Computer Science and Design (CSD)
 
-Sardar Valabhbhai Patel Institute of Technology, Vasad
+Sardar Vallabhbhai Patel Institute of Technology, Vasad
+
+---
+
+## License
+
+This project is developed for educational and academic purposes.
